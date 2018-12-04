@@ -27,7 +27,7 @@ end
  
 def secure_users(list_of_users)
   list_of_users.each do |user_record|
-    user_record[:password] = create_hash_digest(user_record[:password])
+    user_record[:password] = create_hash(user_record[:password])
   end
   list_of_users
 end
