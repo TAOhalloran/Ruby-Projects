@@ -31,3 +31,20 @@ def secure_users(list_of_users)
   end
   list_of_users
 end
+
+new_users =  create_secure_user(users)
+puts new_users
+
+def authenticate_user(username, password, list_of_users)
+  list_of_users.each do |user_record|
+    if user_record[:username] == username && verify_hash 
+  (user_record[:password]) == password
+      return user_record
+    end
+  end
+ "Invalid credentials."
+end
+
+p authenticate_user("tom", "pass1", new_users)
+
+   
