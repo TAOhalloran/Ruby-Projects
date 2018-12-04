@@ -24,7 +24,7 @@ p "Welcome to Authenticator"
 25.times {print '-'}
 puts
 puts "This program will verify your credentials."
-puts "If crendtials are verfied, program will return the user object."
+puts "If credentials are verified, program will return the user object."
 
 attempt = 0
 while attempt < 4
